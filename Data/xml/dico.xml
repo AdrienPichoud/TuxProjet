@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tux:dictionnaire xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xmlns:tux="http://myGame/tux"
+              xsi:schemaLocation="http://myGame/tux ./dico.xsd">
+    <tux:mot niveau="4">Dictionnaire</tux:mot>
+    <tux:mot niveau="2">Plus</tux:mot>
+    <tux:mot niveau="3">Elephant</tux:mot>
+    <tux:mot niveau="1">Loi</tux:mot>
+    <tux:mot niveau="5">Xylphone</tux:mot>
+    <tux:mot niveau="5">Anticonstitutionnellement</tux:mot>
+    <tux:mot niveau="1">Roi</tux:mot>
+    <tux:mot niveau="2">Faux</tux:mot>
+    <tux:mot niveau="3">Champignon</tux:mot>
+    <tux:mot niveau="4">Cardiovasculaire</tux:mot>
+</tux:dictionnaire>
+
+

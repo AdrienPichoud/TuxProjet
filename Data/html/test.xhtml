@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/xhtml.xhtml to edit this template
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Chargement de données XML</title>
+</head>
+<body>
+    <h1>Données XML</h1>
+    <div id="xmlData"></div>
+
+    <script>
+        fetch('C:\Users\user\OneDrive\Documents\NetBeansProjects\Tux\Data\xml')
+            .then(response => response.text())
+            .then(data => {
+                // Afficher les données XML dans la div
+                const xmlDataDiv = document.getElementById('xmlData');
+                xmlDataDiv.textContent = data;
+            })
+            .catch(error => console.error('Une erreur s\'est produite :', error));
+    </script>
+</body>
+</html>
+
+

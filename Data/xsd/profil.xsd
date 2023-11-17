@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://myGame/tux"
+           xmlns:tux="http://myGame/tux"
+           elementFormDefault="qualified">
+    
+ 
+    <xs:include schemaLocation="dico.xsd"/>
+
+    <!-- Élément racine du document -->
+    <xs:element name="profil" type="tux:Profil"/>
+
+    <!-- Définition du type de données pour les pourcentages (ex: 75%) -->
+    <xs:simpleType name="Pourcentage">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\d{1,3}%"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Type complexe pour le document "profil" -->
+    <xs:complexType name="Profil">
+        <xs:sequence>
+            <xs:element name="nom" type="xs:string"/>
+            <xs:element name="avatar" type="xs:string"/>
+            <xs:element name="anniversaire" type="xs:date"/>
+            <xs:element name="parties" type="tux:Parties"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Type complexe pour les éléments "partie" -->
+    <xs:complexType name="Partie">
+        <xs:sequence>
+            <xs:element name="temps" type="xs:decimal" minOccurs="0"/>
+            <xs:element name="mot" type="tux:Mot"/>
+        </xs:sequence>
+        <xs:attribute name="date" type="xs:date" use="required"/>
+            <xs:attribute name="trouvé" type="tux:Pourcentage"/>
+    </xs:complexType>
+
+    <!-- Type complexe pour l'élément "parties" -->
+    <xs:complexType name="Parties">
+        <xs:sequence>
+            <xs:element name="partie" type="tux:Partie" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
+
